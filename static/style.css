@@ -1,0 +1,51 @@
+/* Styling primary Button */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.button {
+  padding: 0.8rem 2.2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.primary-button {
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+  color: whitesmoke;
+  border: 2px solid #4458dc;
+}
+
+.button.primary-button:hover {
+  background: whitesmoke;
+}
+
+.secondary-button {
+  background: whitesmoke;
+  color: black;
+  border: 2px solid #4458dc;
+}
+
+.button.secondary-button:hover {
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+  color: white;
+}
+
+.height {
+  height: 100px;
+}
+
+.centerdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
