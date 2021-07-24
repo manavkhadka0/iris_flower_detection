@@ -37,7 +37,7 @@ with open('./static/images/tree.png','wb') as file:
 
 # Performance
 y_pred = clf.predict(X_test)
-accuracy = round(accuracy_score(y_test,y_pred),2)
+accuracy = round(accuracy_score(y_test,y_pred),2)*100
 con_mat = confusion_matrix(y_test,y_pred)
 
 class_matrix= classification_report(y_test,y_pred,output_dict=True)
