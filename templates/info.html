@@ -23,48 +23,65 @@
         </div>
         <div class="row">
             <div class="col">
-                <h4 class="text-upper text-center">Accuracy: {{acc}}%</h4>
+                <h4 class="text-upper text-light text-center bg-success p-3">Accuracy: {{acc}}%</h4>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 col-12 mt-md-3 my-2 p-3">
+        <div class="row my-3 d-flex justify-content-between">
+            <div class=" col-md-4 col-sm-6 col-12 ">
                 <div class="row">
-                    <h3 class="text-upper mb-3 text-center">Setosa</h3>
-                    {% for key,value in set.items()%}
-                    <p class="row row-cols-2 border border-1">
-                        <span class="col text-upper key">{{key}}: </span>
-                        <span class="col  text-center value">{{value}}</span>
-                    </p>
-                    {%endfor%}
+                    <div class="col">
+                        <h3 class="py-3 px-0 text-light text-upper text-center bg-primary">Setosa</h3>
+                        {% for key,value in set.items()%}
+                        <div class="d-flex align-items-center justify-content-between ">
+                            <div class="text-upper ms-5 p-1">{{key}}: </div>
+                            <div class="me-5">{{value}}</div>
+                        </div>
+                        {%endfor%}
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-12 mt-md-3 my-2 p-3">
-                <div class="row ">
-                    <h3 class="text-upper mb-3 text-center">Versicolor</h3>
-                    {% for key,value in ver.items()%}
-                    <p class="row row-cols-2 border border-1">
-                        <span class="col  text-upper key">{{key}}: </span>
-                        <span class="col  text-center value">{{value}}</span>
-                    </p>
-                    {%endfor%}
+            <div class=" col-md-4 col-sm-6 col-12 ">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="py-3 px-0 text-light text-upper text-center bg-primary">Versicolor</h3>
+                        {% for key,value in ver.items()%}
+                        <div class="d-flex align-items-center justify-content-between ">
+                            <div class="text-upper ms-5 p-1">{{key}}: </div>
+                            <div class="me-5">{{value}}</div>
+                        </div>
+                        {%endfor%}
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4 col-sm-6 col-12 mt-md-3 my-2 p-3">
+            <div class=" col-md-4 col-sm-6 col-12 ">
                 <div class="row">
-                    <h3 class="text-upper mb-3 text-center">Virginica</h3>
-                    {% for key,value in vir.items()%}
-                    <p class="row row-cols-2 border border-1">
-                        <span class="col text-upper key">{{key}}: </span>
-                        <span class="col  text-center value">{{value}}</span>
-                    </p>
-                    {%endfor%}
+                    <div class="col">
+                        <h3 class="py-3 px-0 text-light text-upper text-center bg-primary">Virginica</h3>
+                        {% for key,value in vir.items()%}
+                        <div class="d-flex align-items-center justify-content-between ">
+                            <div class="text-upper ms-5 p-1">{{key}}: </div>
+                            <div class="me-5">{{value}}</div>
+                        </div>
+                        {%endfor%}
+                    </div>
                 </div>
             </div>
 
         </div>
-        <div class="row  align-items-center">
+        <div class="con-mat my-5">
+            <h1 class="text-center">Confusion Matrix</h1>
+            {% for numbers in con%}
+            <div class="row">
+                {%for number in numbers%}
+                <div class="display-4 col text-center p-2 border border-1">{{number}}</div>
+                {%endfor%}
+            </div>
+            {%endfor%}
+        </div>
+
+        <div class="row align-items-center">
             <div class="col d-md-flex justify-content-center align-items-center">
-                <img src="../static/images/tree.png" class="img-fluid height " alt="">
+                <img src="../static/images/tree.png" class="img-fluid" alt="">
                 <a href="/" class="btn button primary-button m-3">Go to Home</a>
             </div>
         </div>

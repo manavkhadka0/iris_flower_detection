@@ -1,7 +1,7 @@
 from flask import Flask, render_template,request
 import pickle
 import numpy as np
-from iris import accuracy,set_matrix,ver_matrix,vir_matrix
+from iris import accuracy,set_matrix,ver_matrix,vir_matrix,con_mat
 
 model = pickle.load(open('model.pkl','rb'))
 app = Flask(__name__)
@@ -23,7 +23,7 @@ def pred():
 
 @app.route("/info")
 def info():
-    return render_template('info.html',acc=accuracy,set=set_matrix,ver=ver_matrix,vir=vir_matrix)
+    return render_template('info.html',acc=accuracy,set=set_matrix,ver=ver_matrix,vir=vir_matrix,con=con_mat)
 
 if __name__ == '__main__':
     app.run(debug=True)
